@@ -2,12 +2,24 @@ package ru.netology.domain;
 
 public class Radioman {
 
-    private int maxStation;
-    private int minStation;
+    private int maxStation = 9;
+    private int minStation = 0;
     private int currentStation;
-    private int maxVolume;
-    private int minVolume;
+    private int maxVolume = 100;
+    private int minVolume = 0;
     private int currentVolume;
+
+    public Radioman(int maxStation, int minStation, int currentStation, int maxVolume, int minVolume, int currentVolume) {
+        this.maxStation = maxStation;
+        this.minStation = minStation;
+        this.currentStation = currentStation;
+        this.maxVolume = maxVolume;
+        this.minVolume = minVolume;
+        this.currentVolume = currentVolume;
+    }
+
+    public Radioman() {
+    }
 
     public int getMaxStation() {
         return maxStation;
@@ -74,31 +86,32 @@ public class Radioman {
         this.currentVolume = currentVolume;
     }
 
-    public void upVolume(){
-        if (currentVolume >= maxVolume){
+    public void upVolume() {
+        if (currentVolume >= maxVolume) {
             this.currentVolume = maxVolume;
             return;
         }
         this.currentVolume++;
     }
 
-    public void downVolume(){
-        if (currentVolume <= minVolume){
+    public void downVolume() {
+        if (currentVolume <= minVolume) {
             this.currentVolume = minVolume;
             return;
         }
         this.currentVolume--;
     }
 
-    public void nextStation(){
-        if (currentStation == maxStation){
+    public void nextStation() {
+        if (currentStation == maxStation) {
             this.currentStation = minStation;
             return;
         }
         this.currentStation++;
     }
-    public void prevStation(){
-        if (currentStation == minStation){
+
+    public void prevStation() {
+        if (currentStation == minStation) {
             this.currentStation = maxStation;
             return;
         }
