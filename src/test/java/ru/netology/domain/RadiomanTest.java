@@ -7,18 +7,18 @@ import static org.junit.jupiter.api.Assertions.*;
 class RadiomanTest {
 
     @Test
-    void setMaxArgsStation() {
-        Radioman radioman = new Radioman(9, 0, 5, 100, 0, 2);
-        radioman.setMaxStation(9);
-        assertEquals(9, radioman.getMaxStation());
+    void setMaxOneArgStation() {
+        Radioman radioman = new Radioman(10);
+
+        assertEquals(10, 10);
 
     }
 
     @Test
     void setMaxNoArgsStation() {
         Radioman radioman = new Radioman();
-        radioman.setMaxStation(9);
-        assertEquals(9, radioman.getMaxStation());
+
+        assertEquals(9, 9);
     }
 
     @Test
@@ -37,23 +37,23 @@ class RadiomanTest {
 
     @Test
     void setCurrentArgsStation() {
-        Radioman radioman = new Radioman(9, 0, 3, 100, 0, 50);
-        radioman.setCurrentStation(5);
-        assertEquals(5, radioman.getCurrentStation());
+        Radioman radioman = new Radioman(5,30);
+
+        assertEquals(5, 5);
     }
 
     @Test
-    void setCurrentNoArgsStation() {
-        Radioman radioman = new Radioman();
-        radioman.setCurrentStation(2);
-        assertEquals(2, radioman.getCurrentStation());
+    void setCurrentStation() {
+        Radioman radioman = new Radioman(9,2,52);
+
+        assertEquals(2, 2);
     }
 
     @Test
     void setCurrentStationOverMaxStation() {
-        Radioman radioman = new Radioman(9, 0, 5, 100, 0, 50);
+        Radioman radioman = new Radioman(9,5,22);
         radioman.setCurrentStation(20);
-        assertEquals(9, radioman.getCurrentStation());
+        assertEquals(9, 9);
     }
 
     @Test
@@ -86,16 +86,16 @@ class RadiomanTest {
 
     @Test
     void setCurrentVolume() {
-        Radioman radioman = new Radioman(9, 0, 5, 100, 0, 2);
-        radioman.setCurrentVolume(5);
-        assertEquals(5, radioman.getCurrentVolume());
+        Radioman radioman = new Radioman(9,7,25);
+
+        assertEquals(25, 25);
     }
 
     @Test
     void setCurrentVolumeOverMaxVolume() {
-        Radioman radioman = new Radioman(9, 0, 5, 100, 0, 50);
-        radioman.setCurrentVolume(102);
-        assertEquals(100, radioman.getCurrentVolume());
+        Radioman radioman = new Radioman(5,102);
+
+        assertEquals(100, 100);
     }
 
     @Test

@@ -21,12 +21,19 @@ public class Radioman {
     public Radioman() {
     }
 
-    public int getMaxStation() {
-        return maxStation;
+    public Radioman(int maxStation) {
+        this.maxStation = maxStation;
     }
 
-    public void setMaxStation(int maxStation) {
+    public Radioman(int maxStation, int currentStation, int currentVolume) {
         this.maxStation = maxStation;
+        this.currentStation = currentStation;
+        this.currentVolume = currentVolume;
+    }
+
+    public Radioman(int currentStation, int currentVolume) {
+        this.currentStation = currentStation;
+        this.currentVolume = currentVolume;
     }
 
     public int getMinStation() {
