@@ -10,7 +10,7 @@ class RadiomanTest {
     void setMaxOneArgStation() {
         Radioman radioman = new Radioman(10);
 
-        assertEquals(10, 10);
+        assertEquals(10, radioman.getMaxStation());
 
     }
 
@@ -18,7 +18,7 @@ class RadiomanTest {
     void setMaxNoArgsStation() {
         Radioman radioman = new Radioman();
 
-        assertEquals(9, 9);
+        assertEquals(9, radioman.getMaxStation());
     }
 
     @Test
@@ -39,21 +39,21 @@ class RadiomanTest {
     void setCurrentArgsStation() {
         Radioman radioman = new Radioman(5,30);
 
-        assertEquals(5, 5);
+        assertEquals(5, radioman.getCurrentStation());
     }
 
     @Test
     void setCurrentStation() {
         Radioman radioman = new Radioman(9,2,52);
 
-        assertEquals(2, 2);
+        assertEquals(2, radioman.getCurrentStation());
     }
 
     @Test
     void setCurrentStationOverMaxStation() {
         Radioman radioman = new Radioman(9,5,22);
         radioman.setCurrentStation(20);
-        assertEquals(9, 9);
+        assertEquals(9, radioman.getCurrentStation());
     }
 
     @Test
@@ -88,14 +88,14 @@ class RadiomanTest {
     void setCurrentVolume() {
         Radioman radioman = new Radioman(9,7,25);
 
-        assertEquals(25, 25);
+        assertEquals(25, radioman.getCurrentVolume());
     }
 
     @Test
     void setCurrentVolumeOverMaxVolume() {
-        Radioman radioman = new Radioman(5,102);
-
-        assertEquals(100, 100);
+        Radioman radioman = new Radioman(9,0,5,100,0,100);
+        radioman.setCurrentVolume(102);
+        assertEquals(100, radioman.getCurrentVolume());
     }
 
     @Test

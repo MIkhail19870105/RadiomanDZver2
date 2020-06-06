@@ -36,6 +36,14 @@ public class Radioman {
         this.currentVolume = currentVolume;
     }
 
+    public int getMaxStation() {
+        return maxStation;
+    }
+
+    public void setMaxStation(int maxStation) {
+        this.maxStation = maxStation;
+    }
+
     public int getMinStation() {
         return minStation;
     }
