@@ -17,11 +17,6 @@ public class Radioman {
     private int minVolume = 0;
     private int currentVolume;
 
-
-    public int getCurrentStation() {
-        return currentStation;
-    }
-
     public void setCurrentStation(int currentStation) {
         if (currentStation > maxStation) {
             this.currentStation = maxStation;
@@ -34,9 +29,6 @@ public class Radioman {
         this.currentStation = currentStation;
     }
 
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
 
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume > maxVolume) {
