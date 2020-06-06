@@ -24,14 +24,14 @@ class RadiomanTest {
     @Test
     void SetMinNoArgsStation() {
         Radioman radioman = new Radioman();
-        radioman.setMinStation(0);
+
         assertEquals(0, radioman.getMinStation());
     }
 
     @Test
     void setMinArgsStation() {
         Radioman radioman = new Radioman(9,0,5,100,0,50);
-        radioman.setMinStation(0);
+
         assertEquals(0, radioman.getMinStation());
     }
 
@@ -73,14 +73,14 @@ class RadiomanTest {
     @Test
     void setMaxVolume() {
         Radioman radioman = new Radioman(9, 0, 5, 100, 0, 50);
-        radioman.setMaxVolume(100);
+
         assertEquals(100, radioman.getMaxVolume());
     }
 
     @Test
     void setMinVolume() {
         Radioman radioman = new Radioman(9, 0, 5, 100, 0, 50);
-        radioman.setMinVolume(0);
+
         assertEquals(0, radioman.getMinVolume());
     }
 
